@@ -1,0 +1,118 @@
+ *
+{
+    box-sizing: border-box;
+    
+} 
+a 
+{
+    text-decoration: none;
+}
+ body
+{
+    height: 100vh;
+}
+
+ section.side-bar
+ {
+     height: 100vh !important;
+     background-color: #FAFFC1;
+     width: 20%;
+ }
+section img 
+{
+    width: 80px;
+    margin: 5px 0;
+}
+section h1 
+{
+    font-size: 14px;
+}
+section p 
+{
+    font-size: 14px;
+}
+.icon 
+{
+    font-size: 15px;
+
+   margin-right: 10px;
+
+}
+.header-bar 
+{
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 0;
+}
+.card-items 
+{
+    position:absolute;
+    width: 80%;
+    top: 15%;
+    right: 0;
+}
+.card-item
+{
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    margin: 15px 10px;
+    width: 220px;
+    padding: 20px 40px;
+
+}
+.card-item span 
+{
+    position: relative;
+    margin-left:90%;
+  
+}
+.card-item i 
+{
+    font-size: 25px;
+}
+.card-item h3
+{
+    font-size: 13px;
+    font-style: oblique;
+    color: grey;
+}
+ .card-1 
+{
+    background-color: #c7e0f1;
+}
+.card-2 
+{
+    background-color:#f1dbe9;
+} 
+.card-3
+{
+    background-color: #eee9cf;
+  
+} 
+.card-3 span 
+{
+    position: relative;
+    margin-left:-5%;
+}
+
+.card-4
+{
+     background:linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+    
+} 
+
+@media screen and  (max-width:500px) {
+    section img 
+{
+    width: 40px;
+    margin: 5px 0;
+}
+section h1 
+{
+    font-size: 8px;
+    padding: 5px 5px !important;
+}
+
+    
+}
