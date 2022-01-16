@@ -90,11 +90,12 @@ section p
     background-color: #eee9cf;
   
 } 
-.card-3 span 
+ .card-3 span 
 {
     position: relative;
     margin-left:-5%;
-}
+} 
+
 
 .card-4
 {

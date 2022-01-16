@@ -4,9 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/bootstrap.css">
+    <link rel="stylesheet" href="../Assets/student.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Students</title>
 </head>
 <body>
-    
+    <main>
+        <section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
+            <h1 class="text-start card-title border-start border-info border-4 fw-bold   p-1">E-classe</h1>
+            <div class="image">
+                <img class="rounded-circle" src="../pics/my-image.jpg" alt="">
+            </div>
+            <h5 class="text-capitalize fs-6">admin name</h5>
+            <p class="text-info text-capitalize">admin</p>
+            <div class="list-group text-start mb-5">
+                <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                 <i class=" icon fas fa-home"></i><a class="d-none d-md-inline-block text-dark" href="../Dashboard/dashboard.html">home</a>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fab fa-discourse col-text-center col-md-text-start"></i><span class="d-none d-md-inline-block">course</span> 
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-graduation-cap"></i><span class="d-none d-md-inline-block">student</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-money-check-alt"></i><a class="d-none d-md-inline-block text-dark" href="../Payment/payment.html">payment</a>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-bug"></i><span class="d-none d-md-inline-block">raport</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-cog"></i><span class="d-none d-md-inline-block">settings</span>
+                </button>
+              </div>
+              <a class="me-2 fw-bolder d-none d-md-inline-block" href="#"> log out </a><span><i class="fas fa-sign-out-alt"></i></span>
+        </section>
+        <div class="header-bar">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <i class=" fas fa-angle-left d-none d-md-inline-block"></i>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="fas fa-bell mt-2 ms-3 me-3"></i>
+                  </form>
+                </div>
+              </nav>
+        </div>
+        <div class="student-list">
+            <h3 class="text-capitalize">students list</h3>
+          <div class="btn-icons">
+                <div class="icons"><i class="fas fa-angle-up text-info fs-6 me-3"></i><br><i class="fas fa-angle-down text-info fs-6 me-3"></i></div>
+                <button class="btn btn-info">add new student</button>
+          </div>
+        </div>
+        <span class="line bg-secondary "></span>
+        <table class="table my-table ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Entroll Number</th>
+                <th scope="col">Date Of Addmision</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>ahmed</td>
+                <td>ahmed20@gmail.com</td>
+                <td>212737746</td>
+                <td>7736630</td>
+                <td>08-Dec-2022</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+              <tr>
+                <th scope="row"><img src="../pics/pexels-photo-2379004 1.png" alt="image"></th>
+                <td>Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        
+ 
+    </main>
+    <script src="../Assets/bootstrap.js"></script>
+
 </body>
 </html>
