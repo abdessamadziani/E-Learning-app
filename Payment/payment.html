@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Assets/bootstrap.css">
-    <link rel="stylesheet" href="../Assets/payment.css">
+    <link rel="stylesheet" href="../Assets/dashboard.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Payment</title>
 </head>
@@ -18,22 +18,21 @@
             </div>
             <h5 class="text-capitalize fs-6">admin name</h5>
             <p class="text-info text-capitalize">admin</p>
-            <div class="list-group text-start mb-5">
-                <button type="button" class="list-group-item list-group-item-action" aria-current="true">
-                 <i class=" icon fas fa-home"></i><a class="d-none d-md-inline-block text-dark" href="../Dashboard/dashboard.html">home</a>
-                </button>
-                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fab fa-discourse col-text-center col-md-text-start"></i><span class="d-none d-md-inline-block">course</span> 
-                </button>
-                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-graduation-cap"></i><a class="d-none d-md-inline-block text-dark" href="../Student/student.html">student</a>
-                </button>
-                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-money-check-alt"></i><span class="d-none d-md-inline-block">payment</span>
-                </button>
-                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-bug"></i><span class="d-none d-md-inline-block">raport</span>
-                </button>
-                <button type="button" class="list-group-item list-group-item-action"><i class=" icon fas fa-cog"></i><span class="d-none d-md-inline-block">settings</span>
-                </button>
+            <div class="list-group text-start my-list mb-5">
+              <a href="../Dashboard/dashboard.html" class="mt-2 p-2"><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
+
+                <a href="#" class="mt-2 p-2"><i class="icon far fa-bookmark col-text-center col-md-text-start"></i><input type="button" value="course" class="d-none d-md-inline-block"></a>
+
+                <a href="../Student/student.html" class="mt-2 p-2"><i class="icon fas fa-graduation-cap"></i><input type="button" value="student" class="d-none d-md-inline-block"></a>
+
+                <a href="#" class="mt-2 p-2"><i class=" icon fas fa-money-check-alt"></i><input type="button" value="payment" class="d-none d-md-inline-block"></a>
+              
+                <a href="#" class="mt-2 p-2"><i class="icon fas fa-bug"></i><input type="button" value="raport" class="d-none d-md-inline-block"></a>
+
+                <a href="#" class="mt-2 p-2"><i class="icon fas fa-cog"></i><input type="button" value="settings" class="d-none d-md-inline-block"></a>
+
               </div>
-              <a class="me-2 fw-bolder d-none d-md-inline-block" href="#"> log out </a><span><i class="fas fa-sign-out-alt"></i></span>
+              <a class="me-2 fw-bolder " href="../index.html"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
         </section> 
         <div class="header-bar">
           <nav class="navbar navbar-light bg-light">
@@ -56,7 +55,7 @@
         </div>
 
         <span class="line bg-secondary "></span>
-        <table class="table my-table ">
+        <table class="table my-table2">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -105,6 +104,9 @@
                 <td>08-Dec-2022</td>
                 <td><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></td>
               </tr>
+
+        
+              
     </main>
     <script src="../Assets/bootstrap.js"></script>
 

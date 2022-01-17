@@ -1665,9 +1665,9 @@ progress {
 .table > thead {
   vertical-align: bottom;
 }
-.table > :not(:first-child) {
+/* .table > :not(:first-child) {
   border-top: 2px solid currentColor;
-}
+} */
 .caption-top {
   caption-side: top;
 }
@@ -1683,9 +1683,9 @@ progress {
 .table-borderless > :not(caption) > * > * {
   border-bottom-width: 0;
 }
-.table-borderless > :not(:first-child) {
+ .table-borderless > :not(:first-child) {
   border-top-width: 0;
-}
+} 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);

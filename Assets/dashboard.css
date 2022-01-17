@@ -103,6 +103,131 @@ section p
     
 } 
 
+
+
+
+
+
+.my-list a i
+{
+    color: black;
+}
+input[type="button"]
+{
+    background: none;
+    border: none;
+    margin: 0;
+    text-transform: capitalize;
+}
+a:hover input[type="button"],a:hover i
+{
+    color: white;
+}
+
+.my-list a:hover
+{
+    background:#47AEFF; 
+}
+
+
+/* header and table student page*/
+.student-list 
+{
+    position: absolute;
+    width: 75%;
+    height: 8%;
+    top: 15%;
+    right: 3%;
+    display: flex;
+    justify-content:space-between;
+}
+.btn-icons 
+{
+display: flex;
+width: 30%;
+justify-content: space-evenly;
+}
+.line 
+{
+  content: "";
+  position: absolute;
+  top: 25%; 
+  right: 5%;
+    width: 70%;
+    height: 2px;
+ 
+}
+.my-table 
+{
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    right: 6%;
+}
+.my-table tr 
+{
+    background-color: white;
+    
+}
+.my-table th 
+{
+    font-size: 12px;
+    color: grey;
+}
+.my-table td 
+{
+    font-size: 9px;
+}
+.my-table th img 
+{
+    width: 30px;
+}
+
+/*  header and table payment page*/
+.payment
+{
+    position: absolute;
+    width: 75%;
+    height: 8%;
+    top: 15%;
+    right: 3%;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.my-table2 
+{
+    width: 70%;
+    position: absolute;
+     top: 30%;
+    right: 6%; 
+}
+.my-table2 tr:nth-child(2n)
+{
+    background-color:#f1ecec;
+}
+.my-table2 tr 
+{
+    background-color: white;
+}
+.my-table2 th 
+{
+    font-size: 12px;
+    color: grey;
+
+}
+.my-table2 td 
+{
+    font-size: 9px;
+}
+.my-table2 th img 
+{
+    width: 30px;
+}
+
+
+
 @media screen and  (max-width:500px) {
     section img 
 {
@@ -113,6 +238,49 @@ section h1
 {
     font-size: 8px;
     padding: 5px 5px !important;
+}
+/* student css */
+.btn 
+{
+    font-size: 8px;
+}
+.my-table 
+{
+    width: 20%;
+}
+.my-table th 
+{
+    font-size: 7px;
+}
+.my-table td 
+{
+    font-size: 4px;
+}
+/* payment css*/
+.my-table2 
+{
+    width: 20%;
+}
+.my-table2 th 
+{
+    font-size: 7px;
+}
+.my-table2 td 
+{
+    font-size: 4px;
+}
+
+.my-table2 
+{
+    width: 20%;
+}
+.my-table2 th 
+{
+    font-size: 7px;
+}
+.my-table2 td 
+{
+    font-size: 4px;
 }
 
     
