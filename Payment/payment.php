@@ -11,7 +11,7 @@
 </head>
 <body>
     <main>
-         <section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
+         <!-- <section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
             <h1 class="text-start card-title border-start border-info border-4 fw-bold   p-1">E-classe</h1>
             <div class="image">
                 <img class="rounded-circle" src="../pics/my-image.jpg" alt="">
@@ -19,20 +19,20 @@
             <h5 class="text-capitalize fs-6">admin name</h5>
             <p class="text-info text-capitalize">admin</p>
             <div class="list-group text-start my-list mb-5">
-              <a href="../Dashboard/dashboard.html" class="mt-2 p-2"><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
+              <a href="../Dashboard/dashboard.php" class="mt-2 p-2"><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
 
                 <a href="#" class="mt-2 p-2"><i class="icon far fa-bookmark col-text-center col-md-text-start"></i><input type="button" value="course" class="d-none d-md-inline-block"></a>
 
-                <a href="../Student/student.html" class="mt-2 p-2"><i class="icon fas fa-graduation-cap"></i><input type="button" value="student" class="d-none d-md-inline-block"></a>
+                <a href="../Student/student.php" class="mt-2 p-2"><i class="icon fas fa-graduation-cap"></i><input type="button" value="student" class="d-none d-md-inline-block"></a>
 
-                <a href="#" class="mt-2 p-2"><i class=" icon fas fa-money-check-alt"></i><input type="button" value="payment" class="d-none d-md-inline-block"></a>
+                <a href="../Payment/payment.php" class="mt-2 p-2"><i class=" icon fas fa-money-check-alt"></i><input type="button" value="payment" class="d-none d-md-inline-block"></a>
               
                 <a href="#" class="mt-2 p-2"><i class="icon fas fa-bug"></i><input type="button" value="raport" class="d-none d-md-inline-block"></a>
 
                 <a href="#" class="mt-2 p-2"><i class="icon fas fa-cog"></i><input type="button" value="settings" class="d-none d-md-inline-block"></a>
 
               </div>
-              <a class="me-2 fw-bolder " href="../index.html"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
+              <a class="me-2 fw-bolder " href="../index.php"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
         </section> 
         <div class="header-bar">
           <nav class="navbar navbar-light bg-light">
@@ -44,7 +44,8 @@
                 </form>
               </div>
             </nav>
-      </div>
+      </div> -->
+      <?php require_once '../decoupage/sidebar-and-headerbar.php'?>
 
         <div class="payment">
             <h3 class="text-capitalize">payment details</h3>
@@ -55,6 +56,21 @@
         </div>
 
         <span class="line bg-secondary "></span>
+        <?php
+
+$payment_list=array(
+  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
+  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
+  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
+  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
+
+ 
+
+);
+
+
+
+          ?>
         <table class="table my-table2">
             <thead>
               <tr>
@@ -68,16 +84,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>ahmed</td>
-                <td>First</td>
-                <td>699543</td>
-                <td>DHS 100,000</td>
-                <td>DHS 500,000</td>
-                <td>08-Dec-2022</td>
+           
+                <?php foreach($payment_list as $liste) { ?>
+                  <tr>
+                <td><?php echo $liste['Name']?></td>
+                <td><?php echo $liste['Payment Schedule']?></td>
+                <td><?php echo $liste['Bill Number']?></td>
+                <td><?php echo $liste['Amount Pay']?></td>
+                <td><?php echo $liste['Balance Amount']?></td>
+                <td><?php echo $liste['Date']?></td>
                 <td><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></td>
+            
               </tr>
-              <tr>
+              <?php } ?>
+              <!-- <tr>
                 <td>ahmed</td>
                 <td>First</td>
                 <td>212737</td>
@@ -85,8 +105,8 @@
                 <td>DHS 500,000</td>
                 <td>08-Dec-2022</td>
                 <td><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></td>
-              </tr>
-              <tr>
+              </tr> -->
+              <!-- <tr>
                 <td>ahmed</td>
                 <td>First</td>
                 <td>212646</td>
@@ -103,7 +123,9 @@
                 <td>DHS 500,000</td>
                 <td>08-Dec-2022</td>
                 <td><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></td>
-              </tr>
+              </tr> -->
+              </tbody>
+          </table>
 
         
               

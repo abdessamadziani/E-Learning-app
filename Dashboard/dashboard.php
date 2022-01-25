@@ -12,7 +12,7 @@
 </head>
 <body>
     <main>
-        <section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
+        <!-- <section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
             <h1 class="text-start card-title border-start border-info border-4 fw-bold   p-1">E-classe</h1>
             <div class="image">
                 <img class="rounded-circle" src="../pics/my-image.jpg" alt="">
@@ -24,16 +24,16 @@
 
                 <a href="#" class="mt-2 p-2"><i class="icon far fa-bookmark col-text-center col-md-text-start"></i><input type="button" value="course" class="d-none d-md-inline-block"></a>
 
-                <a href="../Student/student.html" class="mt-2 p-2"><i class="icon fas fa-graduation-cap"></i><input type="button" value="student" class="d-none d-md-inline-block"></a>
+                <a href="../Student/student.php" class="mt-2 p-2"><i class="icon fas fa-graduation-cap"></i><input type="button" value="student" class="d-none d-md-inline-block"></a>
 
-                <a href="../Payment/payment.html" class="mt-2 p-2"><i class=" icon fas fa-money-check-alt"></i><input type="button" value="payment" class="d-none d-md-inline-block"></a>
+                <a href="../Payment/payment.php" class="mt-2 p-2"><i class=" icon fas fa-money-check-alt"></i><input type="button" value="payment" class="d-none d-md-inline-block"></a>
               
                 <a href="#" class="mt-2 p-2"><i class="icon fas fa-bug"></i><input type="button" value="raport" class="d-none d-md-inline-block"></a>
 
                 <a href="#" class="mt-2 p-2"><i class="icon fas fa-cog"></i><input type="button" value="settings" class="d-none d-md-inline-block"></a>
 
               </div>
-              <a class="me-2 fw-bolder " href="../index.html"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
+              <a class="me-2 fw-bolder " href="../index.php"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
 
         </section>
         <div class="header-bar">
@@ -46,7 +46,9 @@
                   </form>
                 </div>
               </nav>
-        </div>
+        </div> -->
+        <?php require_once '../decoupage/sidebar-and-headerbar.php'?>
+
         <div class="card-items row">
             <div class="card-item card-1 col-12 col-md-6  col-lg-2">
                 <i class=" icon fas fa-graduation-cap mt-0 text-info"></i>
