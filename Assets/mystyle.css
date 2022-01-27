@@ -24,7 +24,7 @@ background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
     display: flex;
     justify-content: center;
     padding: 20px 0;
-}
+} 
 ::placeholder 
 {
     font-size: 13px;

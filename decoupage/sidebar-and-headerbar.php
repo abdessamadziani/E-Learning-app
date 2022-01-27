@@ -1,5 +1,6 @@
 
-<section class=" col-xm-d-none side-bar text-center w-20 d-inline-block  p-3">
+ <section class=" side-bar text-center p-3"> 
+
 <h1 class="text-start card-title border-start border-info border-4 fw-bold   p-1">E-classe</h1>
 <div class="image">
     <img class="rounded-circle" src="../pics/my-image.jpg" alt="">
@@ -7,7 +8,7 @@
 <h5 class="text-capitalize fs-6">admin name</h5>
 <p class="text-info text-capitalize">admin</p>
 <div class="list-group text-start my-list mb-5">
-  <a href="../Dashboard/dashboard.php" class="mt-2 p-2"><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
+  <a href="../Dashboard/dashboard.php" class="mt-2 p-2 "><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
 
     <a href="#" class="mt-2 p-2 "><i class="icon far fa-bookmark col-text-center col-md-text-start"></i><input type="button" value="course" class="d-none d-md-inline-block"></a>
 
