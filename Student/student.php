@@ -8,7 +8,7 @@
         content="E-classe Le site officiel des classes de l'école YouCode  / Si vous etes actuellement  un étiduant  YouCode creer votre compte   ">
     <meta name="keywords" content="E-classe, etudient , payment, admin ,youcode">
     <link rel="stylesheet" href="../Assets/bootstrap.css">
-    <link rel="stylesheet" href="../Assets/dashboard.css">
+    <link rel="stylesheet" href="../Assets/mystyle2.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Students</title>
@@ -21,7 +21,8 @@
             <h3 class="text-capitalize">students list</h3>
           <div class="btn-icons">
                 <div class="icons"><i class="fas fa-angle-up text-info fs-6 me-3"></i><br><i class="fas fa-angle-down text-info fs-6 me-3"></i></div>
-                <button class="btn btn-info">add new student</button>
+                <a href="createstudent.php"><button class="btn btn-info">add new student</button></a>
+                
           </div>
         </div>
         <span class="line bg-secondary "></span>
@@ -40,6 +41,7 @@ $student_list=array(
         <table class="table my-table ">
             <thead>
               <tr>
+                <th scope="col">ID</th>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
@@ -50,15 +52,22 @@ $student_list=array(
               </tr>
             </thead>
             <tbody>
-              <?php  foreach($student_list as $info){  ?>
+           
+           <?php require_once '../myfunctions.php';
+           $students=getstudent();
+
+           ?>
+
+           <?php foreach($students as $student){  ?>
                 <tr>
-                <th scope="row"><img src="<?php echo $info['img']?>" alt="image"></th>
-                <td><?php echo $info['Name']?></td>
-                <td><?php echo $info['Email']?></td>
-                <td><?php echo $info['Phone']?></td>
-                <td><?php echo $info['Entrole Number']?></td>
-                <td><?php echo $info['Date Of Addmision']?></td>
-                <td><i class=" icon fas fa-pencil-alt text-info ms-3"></i><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></td>
+                <td scope="col"><?php echo $student['id']?></td>
+                <td><img src="<?php echo $student['image']?>" alt="image"></td>
+                <td><?php echo $student['name']?></td>
+                <td><?php echo $student['email']?></td>
+                <td><?php echo $student['phone']?></td>
+                <td><?php echo $student['entrolnumber']?></td>
+                <td><?php echo $student['dateofadmission']?></td>
+                <td><a href="updatestudent.php?id=<?php echo  $student['id']?>"><i class=" icon fas fa-pencil-alt text-info ms-3"></i></a><a href="deletestudent.php?id=<?php echo  $student['id']?>"><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></a></td>
               </tr>
            <?php   }?>
             </tbody>

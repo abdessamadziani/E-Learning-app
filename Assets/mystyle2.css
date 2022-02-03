@@ -9,9 +9,8 @@ body {
 }
 
 section.side-bar {
-  height: 100vh !important;
-  /* background-color: #FAFFC1; */
-  background-color: #bb1555;
+  height:100vh !important;
+  background-color: #faffc1;
 
   width: 20%;
 }
@@ -75,9 +74,9 @@ section p {
   margin-left: -5%;
 }
 
- .card-4 {
+.card-4 {
   background: linear-gradient(110.42deg, #00c1fe 18.27%, #faffc1 91.84%);
-}  
+}
 
 .my-list a i {
   color: black;
@@ -173,8 +172,13 @@ a:hover i {
 .my-table2 th img {
   width: 30px;
 }
+@media screen and (max-width: 900px) {
+  .btn {
+    font-size: 8px;
+  }
+}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   section img {
     width: 40px;
     margin: 5px 0;
@@ -188,7 +192,7 @@ a:hover i {
     font-size: 8px;
   }
   .my-table {
-    width: 20%;
+    width: 18%;
   }
   .my-table th {
     font-size: 7px;
@@ -196,6 +200,7 @@ a:hover i {
   .my-table td {
     font-size: 4px;
   }
+
   /* payment css*/
   .my-table2 {
     width: 20%;

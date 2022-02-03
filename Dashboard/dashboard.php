@@ -8,7 +8,8 @@
     <meta name="description" content=" E-classe Le site officiel des classes de l'école YouCode  / Si vous etes actuellement  un étiduant  YouCode creer votre compte   ">
     <meta name="keywords" content="E-classe, etudient , payment, admin ,youcode">
     <link rel="stylesheet" href="../Assets/bootstrap.css">
-    <link rel="stylesheet" href="../Assets/dashboard.css">
+    <link rel="stylesheet" href="../Assets/mystyle2.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <title>Dashboard</title>

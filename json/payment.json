@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"samad",
+        "Payment Schedule":"first",
+        "Bill Number":"77365",
+        "Amount Pay":"100,000 DHS",
+        "Balance Amount":"500,000 DHS",
+        "Date":"08-Dec-2022"
+    },
+    {
+        "id":2,
+        "name":"samad",
+        "Payment Schedule":"first",
+        "Bill Number":"77365",
+        "Amount Pay":"100,000 DHS",
+        "Balance Amount":"500,000 DHS",
+        "Date":"08-Dec-2022"
+    },
+    {
+        "id":3,
+        "name":"samad",
+        "Payment Schedule":"first",
+        "Bill Number":"77365",
+        "Amount Pay":"100,000 DHS",
+        "Balance Amount":"500,000 DHS",
+        "Date":"08-Dec-2022"
+    },
+    {
+        "id":4,
+        "name":"samad",
+        "Payment Schedule":"first",
+        "Bill Number":"77365",
+        "Amount Pay":"100,000 DHS",
+        "Balance Amount":"500,000 DHS",
+        "Date":"08-Dec-2022"
+    }
+]
