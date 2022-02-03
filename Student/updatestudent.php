@@ -53,11 +53,11 @@
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Entroll Number</label>
-                        <input type="text" name="entrol number" class="form-control" id="exampleInputPassword1" value="<?php echo $student['entrolnumber'] ?>">
+                        <input type="text" name="entrolnumber" class="form-control" id="exampleInputPassword1" value="<?php echo $student['entrolnumber'] ?>">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Date Of Addmision</label>
-                        <input type="text" name="date" class="form-control" id="exampleInputPassword1" value="<?php echo $student['dateofadmission'] ?>">
+                        <input type="text" name="dateofadmission" class="form-control" id="exampleInputPassword1" value="<?php echo $student['dateofadmission'] ?>">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

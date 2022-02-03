@@ -32,7 +32,7 @@
                 <form method="post">
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">ID</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1" value=" " ;>
+                        <input type="number" readonly class="form-control" id="exampleInputPassword1" value=" " ;>
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Image</label>

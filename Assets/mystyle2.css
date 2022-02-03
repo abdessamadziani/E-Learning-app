@@ -9,7 +9,7 @@ body {
 }
 
 section.side-bar {
-  height:100vh !important;
+  height:800px !important;
   background-color: #faffc1;
 
   width: 20%;
