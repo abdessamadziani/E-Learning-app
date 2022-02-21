@@ -15,7 +15,11 @@
 </head>
 <body>
     <main>
-        <?php require_once '../decoupage/sidebar-and-headerbar.php'?>
+        <?php
+         session_start();
+         require_once '../decoupage/sidebar-and-headerbar.php'?>
+        
+
 
         <div class="student-list">
             <h3 class="text-capitalize">students list</h3>
@@ -26,22 +30,11 @@
           </div>
         </div>
         <span class="line bg-secondary "></span>
-        <?php
-
-$student_list=array(
-  array("img"=>"../pics/pexels-photo-2379004 1.png","Name"=>"samad","Email"=>"samad30@gmail.com","Phone"=>"21263774899","Entrole Number"=>"77765","Date Of Addmision"=>"08-Dec-2022"),
-  array("img"=>"../pics/pexels-photo-2379004 1.png","Name"=>"samad","Email"=>"samad30@gmail.com","Phone"=>"21263774899","Entrole Number"=>"77765","Date Of Addmision"=>"08-Dec-2022"),
-  array("img"=>"../pics/pexels-photo-2379004 1.png","Name"=>"samad","Email"=>"samad30@gmail.com","Phone"=>"21263774899","Entrole Number"=>"77765","Date Of Addmision"=>"08-Dec-2022"),
-  array("img"=>"../pics/pexels-photo-2379004 1.png","Name"=>"samad","Email"=>"samad30@gmail.com","Phone"=>"21263774899","Entrole Number"=>"77765","Date Of Addmision"=>"08-Dec-2022"),
-  array("img"=>"../pics/pexels-photo-2379004 1.png","Name"=>"samad","Email"=>"samad30@gmail.com","Phone"=>"21263774899","Entrole Number"=>"77765","Date Of Addmision"=>"08-Dec-2022"),
-
-);
-
-          ?>
+       
         <table class="table my-table ">
             <thead>
               <tr>
-                <th scope="col">ID</th>
+                <!-- <th scope="col">ID</th> -->
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
@@ -53,21 +46,26 @@ $student_list=array(
             </thead>
             <tbody>
            
-           <?php require_once '../myfunctions.php';
-           $students=getstudent();
+           <?php require_once '../decoupage/operation.php';
+           $con=connexion();
+           $req =$con->query('SELECT * from students');
+            ?>
+          
+        
 
-           ?>
-
-           <?php foreach($students as $student){  ?>
+           <?php  while( $ligne=$req->fetch()) {  ?>
                 <tr>
-                <td scope="col"><?php echo $student['id']?></td>
-                <td><img src="<?php echo $student['image']?>" alt="image"></td>
-                <td><?php echo $student['name']?></td>
-                <td><?php echo $student['email']?></td>
-                <td><?php echo $student['phone']?></td>
-                <td><?php echo $student['entrolnumber']?></td>
-                <td><?php echo $student['dateofadmission']?></td>
-                <td><a href="updatestudent.php?id=<?php echo  $student['id']?>"><i class=" icon fas fa-pencil-alt text-info ms-3"></i></a><a href="deletestudent.php?id=<?php echo  $student['id']?>"><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></a></td>
+                <!-- <td scope="col"><?php echo $ligne['id']?></td> -->
+                <!-- <td><img src="<?php echo $ligne['image']?>" alt="image"></td> -->
+                 <td><img src="../pics/pexels-photo-2379004 1.png" alt="image"></td>
+
+                <td><?php echo $ligne['name']?></td>
+                <td><?php echo $ligne['email']?></td>
+                <td><?php echo $ligne['phone']?></td>
+                <td><?php echo $ligne['enroll_number']?></td>
+                <td><?php echo $ligne['date_of_addmison']?></td>
+                <td><a href="updatestudent.php?id=<?php echo  $ligne['id_student']?>"><i class=" icon fas fa-pencil-alt text-info ms-3"></i></a>
+                <a href="../decoupage/operation.php?delete=<?php echo  $ligne['id_student']?>"><i class=" icon fas fa-trash-alt text-info ms-3 mt-2"></i></a></td>
               </tr>
            <?php   }?>
             </tbody>

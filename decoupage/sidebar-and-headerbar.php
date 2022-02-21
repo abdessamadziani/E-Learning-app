@@ -5,7 +5,7 @@
 <div class="image">
     <img class="rounded-circle" src="../pics/my-image.jpg" alt="">
 </div>
-<h5 class="text-capitalize fs-6">admin name</h5>
+<h5 class="text-capitalize fs-6"><?php echo $_SESSION['name']?></h5>
 <p class="text-info text-capitalize">admin</p>
 <div class="list-group text-start my-list mb-5">
   <a href="../Dashboard/dashboard.php" class="mt-2 p-2 "><i class="icon fas fa-home"></i><input type="button" value="home" class="d-none d-md-inline-block"></a>
@@ -19,9 +19,8 @@
     <a  href="#" class="mt-2 p-2"><i class="icon fas fa-bug"></i><input type="button" value="raport" class="d-none d-md-inline-block" ></a>
 
     <a href="#" class="mt-2 p-2"><i class="icon fas fa-cog"></i><input type="button" value="settings" class="d-none d-md-inline-block"></a>
-
   </div>
-  <a class="me-2 fw-bolder " href="../index.php"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
+  <a class="me-2 fw-bolder " href="../Dashboard/logout.php"><input style="color: black;" type="button" value="log out" class=" d-none d-md-inline-block fs-4"><i class="fas fa-sign-out-alt fs-4 fw-bold text-info"></i></a>
 </section> 
 <div class="header-bar">
 <nav class="navbar navbar-light bg-light">

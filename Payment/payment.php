@@ -15,7 +15,13 @@
 <body>
     <main>
      
-      <?php require_once '../decoupage/sidebar-and-headerbar.php'?>
+      <?php
+          session_start();
+       require_once '../decoupage/sidebar-and-headerbar.php';
+        require_once "../decoupage/operation.php";
+
+      ?>
+
         <div class="payment">
             <h3 class="text-capitalize">payment details</h3>
             <div class="btn-icons">
@@ -25,18 +31,7 @@
         </div>
 
         <span class="line bg-secondary "></span>
-        <?php
-
-$payment_list=array(
-  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
-  array("Name"=>"ahmed","Payment Schedule"=>"second","Bill Number"=>"77465","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
-  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"02-Dec-2021"),
-  array("Name"=>"samad","Payment Schedule"=>"First","Bill Number"=>"774665","Amount Pay"=>"DHS 100,000","Balance Amount"=>"DHS 500,000","Date"=>"08-Dec-2022"),
-);
-
-
-
-          ?>
+   
         <table class="table my-table2">
             <thead>
               <tr>
@@ -51,21 +46,22 @@ $payment_list=array(
             </thead>
             <tbody>
   <?php
-  require "../myfunctions.php";
-  $payments=getpayment();
+  $con=connexion();
+  $req=$con->query('select * from payment_details');
   ?>
                               
-                   <?php foreach($payments as $payment) { ?>
-                  <tr>
-                <td><?php echo $payment['id']?></td>
-                <td><?php echo $payment['name']?></td>
-                <td><?php echo $payment['Payment Schedule']?></td>
-                <td><?php echo $payment['Bill Number']?></td>
-                <td><?php echo $payment['Amount Pay']?></td>
-                <td><?php echo $payment['Balance Amount']?></td>
-                <td><?php echo $payment['Date']?></td>
-                <td><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></td>
-            
+             <?php while($ligne=$req->fetch()) { ?>
+              <tr>
+                <!-- <td><?php echo $ligne['id_payment']?></td> -->
+                <td><?php echo $ligne['name']?></td>
+                <td><?php echo $ligne['payment_schedule']?></td>
+                <td><?php echo $ligne['billNumber']?></td>
+                <td><?php echo $ligne['amountPaid']?></td>
+                <td><?php echo $ligne['balanceAmount']?></td>
+                <td><?php echo $ligne['Date']?></td>
+
+                <td> <a href="../Student/viewstudent.php?view=<?php echo $ligne['id_payment'] ?>"><i class=" icon fas fa-eye text-info ms-3 mt-2"></i></a></td>
+
               </tr>
               <?php } ?>   
               

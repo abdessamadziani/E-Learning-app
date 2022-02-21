@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    require_once '../decoupage/operation.php';
+    $con=connexion();
+    $req= $con->query('SELECT  count(*) FROM students');
+    $courses=$con->query('SELECT  count(*) FROM courses');
+    //  $courses->execute();
+    $sum_paid=$con->query('SELECT SUM(amountPaid) from payment_details');
+
+    if(!isset($_SESSION['email']))
+        {
+            header('location: ../index.php');
+            die();
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,24 +32,32 @@
 
 <body>
     <main>
-        <?php require_once '../decoupage/sidebar-and-headerbar.php' ?>
+
+
+        <?php
+        require_once '../decoupage/sidebar-and-headerbar.php';
+?>
+   
 
         <div class="card-items row">
             <div class="card-item card-1 col-12 col-md-6  col-lg-2">
                 <i class=" icon fas fa-graduation-cap mt-0 text-info"></i>
                 <h3 class="text-capitalize   pt-1">students</h3>
-                <span class="text-dark fw-bold fs-3 ">243</span>
+                <span class="text-dark fw-bold fs-3 "><?php echo $req ->fetchColumn() ;?>
+</span>
             </div>
             <div class="card-item card-2  col-lg-2">
                 <i class=" icon fab fa-discourse text-danger "></i>
                 <h3 class="text-capitalize   pt-1">courses</h3>
-                <span class="text-dark fw-bold fs-3">13</span>
+                <span class="text-dark fw-bold fs-3"><?php echo $courses ->fetchColumn() ;?>
+</span>
             </div>
 
             <div class="card-item card-3  col-lg-2">
                 <i class=" icon fas fa-money-check-alt text-info"></i>
                 <h3 class="text-capitalize   pt-1">payments</h3>
-                <span class="  fw-bold fs-5 text-dark text-uppercase">dhs 556,000</span>
+                <span class="  fw-bold fs-5 text-dark text-uppercase">dhs <?php   echo $sum_paid ->fetchColumn() ;?>
+</span>
             </div>
             <div class="card-item card-4  col-lg-2">
                 <i class=" icon fas fa-user-alt"></i>

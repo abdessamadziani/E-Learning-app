@@ -9,32 +9,18 @@
     <meta name="keywords" content="E-classe, etudient , payment, admin ,youcode">
     <link rel="stylesheet" href="../Assets/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>delete Student</title>
+    <title>View Student</title>
 </head>
 
 <body>
-<?php
-    require_once '../myfunctions.php';
-    if(!isset($_GET['id']))
-    echo " not found";
-    else
-    {
-        $studentid = $_GET['id'];   
-        deletestudent($studentid);
-        header('location:student.php');
-        exit;
-
-    }
-  
-
-       
-
-   
-
-    ?>
 
 
-<script src="../Assets/bootstrap.js"></script>
+<div class="alert alert-danger" role="alert">
+     Student Does Not Exist !!! 
+</div>
+
+
+    <script src="../Assets/bootstrap.js"></script>
 </body>
 
 </html>

@@ -14,14 +14,8 @@
 
 <body>
     <?php
-    require_once '../myfunctions.php';
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        createstudent($_POST);
-        header('location:student.php');
-        exit;
-
-    }
-    ?>
+    require_once '../decoupage/operation.php';
+     ?>
     <div class="container">
 
         <div class="card">
@@ -34,10 +28,10 @@
                         <label for="exampleInputPassword1" class="form-label">ID</label>
                         <input type="number" readonly class="form-control" id="exampleInputPassword1" value=" " ;>
                     </div>
-                    <div class="mb-2">
+                    <!-- <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Image</label>
                         <input type="file" name="image" class="form-control" id="exampleInputPassword1">
-                    </div>
+                    </div> -->
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Name</label>
                         <input type="text" name="name" class="form-control" id="exampleInputPassword1">
@@ -52,13 +46,14 @@
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Entroll Number</label>
-                        <input type="text" name="entrolnumber" class="form-control" id="exampleInputPassword1">
+                        <input type="text" name="enroll_number" class="form-control" id="exampleInputPassword1">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Date Of Addmision</label>
-                        <input type="text" name="dateofadmission" class="form-control" id="exampleInputPassword1">
+                        <input type="text" name="date_of_addmison" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <button type="submit" class="btn btn-primary">creer</button>
+                    <button type="submit" class="btn btn-primary" name="save">creer</button>
+                    
                 </form>
             </div>
         </div>

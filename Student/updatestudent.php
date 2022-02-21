@@ -14,15 +14,8 @@
 
 <body>
     <?php
-    require_once '../myfunctions.php';
-    $studentid = $_GET['id'];
-    $student = getstudentbyid($studentid);
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        updatestudent($_POST, $studentid);
-        header('location:student.php');
-        exit;
-
-    }
+    require_once '../decoupage/operation.php';
+      
    
 
     ?>
@@ -30,36 +23,37 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Update Student <b><?php echo $student['name'] ?></b> Information</h3>
+                <h3>Update Student <b><?php echo $name ?></b> Information</h3>
             </div>
             <div
              class="card-body">
                 <form method="post">
-                    <div class="mb-2">
+                <input type="hidden" name="id" value=<?php  echo  $id ?> >
+                    <!-- <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Image</label>
                         <input type="file" name="image" class="form-control" id="exampleInputPassword1">
-                    </div>
+                    </div> -->
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Name</label>
-                        <input type="text" name="name" class="form-control" id="exampleInputPassword1" value="<?php echo $student['name'] ?>">
+                        <input type="text" name="name" class="form-control" id="exampleInputPassword1" value="<?php echo $name ?>">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $student['email'] ?>">
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $email ?>">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Phone</label>
-                        <input type="number" name="phone" class="form-control" id="exampleInputPassword1" value="<?php echo $student['phone'] ?>">
+                        <input type="number" name="phone" class="form-control" id="exampleInputPassword1" value="<?php echo $phone ?>">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Entroll Number</label>
-                        <input type="text" name="entrolnumber" class="form-control" id="exampleInputPassword1" value="<?php echo $student['entrolnumber'] ?>">
+                        <input type="text" name="enroll_number" class="form-control" id="exampleInputPassword1" value="<?php echo $number ?>">
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Date Of Addmision</label>
-                        <input type="text" name="dateofadmission" class="form-control" id="exampleInputPassword1" value="<?php echo $student['dateofadmission'] ?>">
+                        <input type="text" name="date_of_addmison" class="form-control" id="exampleInputPassword1" value="<?php echo $date?>">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" name="update">Submit</button>
                 </form>
             </div>
         </div>
